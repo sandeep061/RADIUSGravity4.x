@@ -1,0 +1,258 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.3.2</version>
+        <relativePath/>
+        <!--   lookup parent from repository   -->
+    </parent>
+    <groupId>ois.radius.core</groupId>
+    <artifactId>RADIUSGravity4.x</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>RADIUSGravity4.x</name>
+    <description>Demo project for Spring Boot</description>
+    <url/>
+    <licenses>
+        <license/>
+    </licenses>
+    <developers>
+        <developer/>
+    </developers>
+    <scm>
+        <connection/>
+        <developerConnection/>
+        <tag/>
+        <url/>
+    </scm>
+    <properties>
+        <java.version>17</java.version>
+        <lib.path> D:\${user.name}\code\common\javalibs </lib.path>
+        <project.path> D:\${user.name}\root\4.x\projects\cc\branches\R.4.16.1 </project.path>
+        <db.path> D:\${user.name}\code\projects\Code-JPA\2.x\trunk </db.path>
+        <codeEntity.path> D:\${user.name}\code\projects\CODE-Entities-2.x </codeEntity.path>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!--          <dependency>
+                            <groupId>org.springframework.boot</groupId>
+                            <artifactId>spring-boot-devtools</artifactId>
+                            <scope>runtime</scope>
+                            <optional>true</optional>
+                        </dependency>  -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!--
+                        https://mvnrepository.com/artifact/jakarta.persistence/jakarta.persistence-api   -->
+        <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>5.2.6.RELEASE</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate.orm</groupId>
+            <artifactId>hibernate-c3p0</artifactId>
+            <version>6.6.0.Final</version>
+        </dependency>
+        <!--   https://mvnrepository.com/artifact/org.hibernate/hibernate-core   -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>6.6.0.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>OKHTTP</groupId>
+            <artifactId>OKHTTP</artifactId>
+            <version>1.5</version>
+            <scope>system</scope>
+            <systemPath>${lib.path}\okhttp-3.6.0.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>CODE-SOCKET</groupId>
+            <artifactId>CODE-SOCKET</artifactId>
+            <version>1.7</version>
+            <scope>system</scope>
+            <systemPath>${lib.path}\CODE-Socket-1.7.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>OKIO</groupId>
+            <artifactId>OKIO</artifactId>
+            <version>1.5</version>
+            <scope>system</scope>
+            <systemPath>${lib.path}\okio-1.11.0.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>CrsCde.CODE</groupId>
+            <artifactId>CODE-Common</artifactId>
+            <version>1.6</version>
+            <scope>system</scope>
+            <systemPath>${lib.path}\CODE-Common-1.7.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>CrsCde.CODE</groupId>
+            <artifactId>CODE-runtime</artifactId>
+            <version>2.1</version>
+            <scope>system</scope>
+            <systemPath>${lib.path}\CODE-Runtime-2.1.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>CrsCde.CODE</groupId>
+            <artifactId>CODE-Entities</artifactId>
+            <version>2.1</version>
+            <scope>system</scope>
+            <!--              <systemPath>${lib.path}\CODE-Entities-2.1.jar</systemPath>  -->
+            <systemPath>D:/${user.name}/code/projects/CODE-Entities/2.x/trunk/CODE-Entities-2.x/dist/CODE-Entities-2.x.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>CrsCde.CODE</groupId>
+            <artifactId>CODE-UA-Framework</artifactId>
+            <version>2.1</version>
+            <scope>system</scope>
+            <systemPath>${lib.path}\CODE-UA-Framework-2.1.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>CrsCde.CODE</groupId>
+            <artifactId>CODE-JPA-Framework</artifactId>
+            <version>2.1</version>
+            <scope>system</scope>
+            <!--              <systemPath>${lib.path}\CODE-JPA-Framework-2.1.jar</systemPath>  -->
+            <systemPath>${db.path}\CODE-JPA-Framework-2.x\dist\CODE-JPA-Framework-2.x.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>CrsCde.CODE</groupId>
+            <artifactId>CODE-JPA-MySQL</artifactId>
+            <version>2.1</version>
+            <scope>system</scope>
+            <!--              <systemPath>${lib.path}\CODE-JPA-MySQL-2.1.jar</systemPath>  -->
+            <systemPath>${db.path}\CODE-JPA-MySQL-2.x\dist\CODE-JPA-MySQL-2.x.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>RADIUS-Common</groupId>
+            <artifactId>RADIUSCommon</artifactId>
+            <version>4.x</version>
+            <scope>system</scope>
+            <systemPath>${project.path}\RADIUSCommon4.x\dist\RADIUSCommon4.x.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>RADIUS-Entities</groupId>
+            <artifactId>RADIUSEntities</artifactId>
+            <version>4.x</version>
+            <scope>system</scope>
+            <systemPath>${project.path}\RADIUSEntities4.x\dist\RADIUSEntities4.x.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>code.uaap</groupId>
+            <artifactId>UAAPFramework</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${lib.path}\uaap\xdUAAPServiceFramework-1.0.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>code.uaap</groupId>
+            <artifactId>UAAPSDK</artifactId>
+            <version>1.1</version>
+            <scope>system</scope>
+            <systemPath>${lib.path}\uaap\xdUAAPServiceSDK-1.1.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.vn.radius.realm</groupId>
+            <artifactId>REALMEntities4.4.2.1.00</artifactId>
+            <scope>system</scope>
+            <version>4.X</version>
+            <systemPath>D:/${user.name}/root/4.x/projects/realm/libraries/releases/beta/REALMEntities4.4.2.1.00.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>org.vn.radius.realm</groupId>
+            <artifactId>REALMFramework4.4.2.1.00</artifactId>
+            <scope>system</scope>
+            <version>4.X</version>
+            <systemPath>D:/${user.name}/root/4.x/projects/realm/libraries/releases/beta/REALMFramework4.4.2.1.00.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>RADIUSFramework</groupId>
+            <artifactId>RADIUSFramework</artifactId>
+            <version>5.x</version>
+            <scope>system</scope>
+            <systemPath>${project.path}\RADIUSFramework4.x\dist\RADIUSFramework4.x.jar</systemPath>
+        </dependency>
+    </dependencies>
+    <build>
+        <finalName>RADIUSGravity4.16.1.1.01</finalName>
+        <plugins>
+            <!-- Spring Boot build plugin -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>ois.cc.gravity.Main</mainClass>
+                    <includeSystemScope>true</includeSystemScope>
+                </configuration>
+            </plugin>
+
+            <!-- Clean plugin to handle Windows file locks better -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>3.3.2</version>
+                <configuration>
+                    <failOnError>false</failOnError>
+                </configuration>
+            </plugin>
+
+            <!-- Compiler plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <outputDirectory>D:\\SRC</outputDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
+  </build>
+    <!--      <build>  -->
+    <!--          <plugins>  -->
+    <!--              <plugin>  -->
+    <!--                  <groupId>org.springframework.boot</groupId>  -->
+    <!--                  <artifactId>spring-boot-maven-plugin</artifactId>  -->
+    <!--              </plugin>  -->
+    <!--          </plugins>  -->
+    <!--      </build>  -->
+</project>
