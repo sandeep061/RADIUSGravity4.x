@@ -17,7 +17,7 @@ public class AppConst
     {
         MySQL,
         ObjectDB,;
-    }
+    }//
     public static DBProd DB_PROD = DBProd.MySQL;
     public static String UA_SERVICE_BASE_PKG = "ois.cc.gravity.services";
     public static String UA_REQUEST_BASE_PKG = "ois.cc.gravity.framework.requests";
