@@ -32,9 +32,9 @@ public class AppConst
     public static String SYS_CLIENT_CODE = "SYS";
     public static String SYS_CLIENT_NAME = "RADIUS CC Server";
     
-    public static String SRVR_ENTITY_BASE_PKG = "ois.radius.core.entities";
-    public static String SRVR_ENTITY_CLIENT_PKG = "ois.radius.cc.entities.tenant";
-    public static String SRVR_ENTITY_SYS_PKG = "ois.radius.cc.entities.sys";
+//    public static String SRVR_ENTITY_BASE_PKG = "ois.radius.core.entities";
+//    public static String SRVR_ENTITY_CLIENT_PKG = "ois.radius.cc.entities.tenant";
+//    public static String SRVR_ENTITY_SYS_PKG = "ois.radius.cc.entities.sys";
     public static String EN_QUERY_BASE_PKG = "ois.cc.gravity.db.queries";
     public static String NU_SYS_APPCode = "GRAVITY";
 
